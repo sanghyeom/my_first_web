@@ -55,20 +55,20 @@
 
 ## 📁 프로젝트 구조 (예상)
 
-├── main.py # FastAPI 메인 애플리케이션 및 라우트 정의
-├── database.py # DB 연결 설정 (SQLAlchemy engine, SessionLocal 등)
-├── models.py # SQLAlchemy DB 모델 정의 (User, Post 등)
-├── schemas.py # Pydantic 스키마 정의 (Request/Response 데이터 모델)
-├── templates/ # Jinja2 HTML 템플릿 파일들
-│ ├── base.html # 기본 레이아웃 템플릿
-│ ├── index.html # 인덱스 페이지
-│ ├── web_board.html # 게시글 목록 페이지
-│ ├── web_board_detail.html # 게시글 상세 페이지
-│ ├── web_board_create.html # 게시글 작성 페이지
-│ └── ... (로그인, 회원가입 등 다른 페이지)
-└── static/ # 정적 파일 (CSS, JS 등)
-└── styles.css # 웹사이트 스타일 정의
-└── scripts.js # 클라이언트 측 JavaScript (예: 삭제 기능)
+├── main.py # FastAPI 메인 애플리케이션 및 라우트 정의</br>
+├── database.py # DB 연결 설정 (SQLAlchemy engine, SessionLocal 등)</br>
+├── models.py # SQLAlchemy DB 모델 정의 (User, Post 등)</br>
+├── schemas.py # Pydantic 스키마 정의 (Request/Response 데이터 모델)</br>
+├── templates/ # Jinja2 HTML 템플릿 파일들</br>
+│ ├── base.html # 기본 레이아웃 템플릿</br>
+│ ├── index.html # 인덱스 페이지</br>
+│ ├── web_board.html # 게시글 목록 페이지</br>
+│ ├── web_board_detail.html # 게시글 상세 페이지</br>
+│ ├── web_board_create.html # 게시글 작성 페이지</br>
+│ └── ... (로그인, 회원가입 등 다른 페이지)</br>
+└── static/ # 정적 파일 (CSS, JS 등)</br>
+└── styles.css # 웹사이트 스타일 정의</br>
+└── scripts.js # 클라이언트 측 JavaScript (예: 삭제 기능)</br>
 
 
 ## 💡 개선 예정 / 추가 기능
