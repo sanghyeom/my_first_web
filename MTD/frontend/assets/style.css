@@ -1,0 +1,101 @@
+/* style.css -login,register*/
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-form button {
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #0056b3;
+}
+
+button.register-button {
+  margin-top: 12px;
+  padding: 12px;
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+button.register-button:hover {
+  background: #e2f0ff;
+}
+
+.link-text {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.simple-header {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 14px;
+  color: purple;
+  text-decoration: underline;
+}
+
+.logo-img {
+  width: 60px; 
+  height: auto;
+}
+
+.logo-link {
+  text-decoration: none;
+}

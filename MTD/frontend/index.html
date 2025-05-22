@@ -1,0 +1,42 @@
+{% extends "base.html" %} 
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const loginSuccess = urlParams.get('login_success');
+      if (loginSuccess === 'true') {
+          alert("로그인에 성공했습니다! 환영합니다!");
+      }
+    </script>
+
+    <section class="hero">
+        <div class="container">
+            <h2>{{ welcome_message }}</h2>
+            <p>테스트</p>
+            <a href="#" class="btn-primary">테스트</a>
+        </div>
+    </section>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>최신 기록 1</h3>
+            <p>어느 멋진 여행지의 이야기...</p>
+        </div>
+        <div class="card">
+            <h3>CSS 핵심</h3>
+            <p>예쁜 UI 만들기</p>
+        </div>
+        <div class="card">
+            <h3>JavaScript 입문</h3>
+            <p>동적인 웹 시작!</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block head_extra %}
+{% endblock %}
+
+{% block scripts_extra %}
+{% endblock %}

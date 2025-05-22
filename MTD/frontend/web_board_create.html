@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+
+{% block title %}새 글 작성{% endblock %}
+
+{% block content %}
+  <div class="container mt-4"> 
+    <h1>새 글 작성</h1>
+
+    <form action="/create_post" method="post">
+      <!-- 제목 입력 필드 -->
+      <div class="form-group" style="margin-bottom: 20px;"> 
+        <label for="title" style="display: block; margin-bottom: 5px; font-weight: 600;">제목:</label> 
+        <input type="text" id="title" name="title" class="form-control" required 
+               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;"> 
+      </div>
+
+      <!-- 내용 입력 필드 -->
+      <div class="form-group" style="margin-bottom: 20px;"> 
+        <label for="content" style="display: block; margin-bottom: 5px; font-weight: 600;">내용:</label> 
+        <textarea id="content" name="content" class="form-control" rows="10" required 
+                  style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+      </div>
+
+      <!-- 버튼 그룹 -->
+      <div class="post-actions"> 
+        <button type="submit" class="btn btn-primary btn-sm">작성 완료</button> 
+        <a href="/web_board" class="btn btn-outline-primary btn-sm">목록으로</a> 
+      </div>
+    </form>
+  </div>
+{% endblock %}
+
+{% block scripts_extra %}{% endblock %}

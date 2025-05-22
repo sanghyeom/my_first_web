@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% block title %}<title>기본 웹사이트</title>{% endblock %} 
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="nav-bar">
+      <a href="/" class="logo-link">
+      <img src="/static/logo.png" alt="Logo" class="logo-img" />
+      <nav class="menu">
+          <a href="/web_board" class="btn">Web board</a>
+          <a href="/mypage" class="btn">My page</a>
+          {% if is_logged_in %}
+              <a href="/logout" class="btn">Logout</a>
+          {% else %}
+              <a href="/login" class="btn">Login</a>
+              <a href="/signup" class="btn">Register</a>
+          {% endif %}
+      </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- 공통 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <p>ⓒ 2025 My Travel Record. All rights reserved.</p>
+    </div>
+  </footer>
+
+  {% block scripts_extra %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- 홈페이지 로고 링크 -->
+  <header class="simple-header"> 
+    <a href="/" class="logo-link">
+      <img src="/static/logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </header>
+
+  <div class="form-container">
+    <form class="login-form" method="post" action="/login">
+      <h2>Log in to continue</h2>
+      <input type="text" name="identification" placeholder="ID" required />
+      <input type="password" name="password" placeholder="PW" required />
+      <button type="submit">Login</button>
+      <button type="button" class="register-button" onclick="location.href='/signup'">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const loginFailed = urlParams.get('login_failed');
+    if (loginFailed === 'true') {
+      alert("로그인 실패: 아이디 또는 비밀번호를 확인해주세요.");
+    }
+  </script>
+
+</body>
+</html>

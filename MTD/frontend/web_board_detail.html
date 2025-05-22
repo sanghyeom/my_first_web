@@ -1,0 +1,79 @@
+{% extends "base.html" %} 
+ 
+{% block content %}
+<div class="container mt-4">
+
+    <!-- 게시글 제목 및 메타 정보 -->
+    <div class="post-detail-header">
+        <h1 class="post-detail-title">{{ post.title }}</h1>
+        <p class="post-detail-meta">
+            작성자: <strong>{{ post.author.identification }}</strong> |
+            작성일: {% if post.created_at %} {{ post.created_at.strftime('%Y-%m-%d %H:%M') }} {% else %} 날짜 정보 없음 {% endif %} |
+            조회수: {{ post.views }}
+        </p>
+    </div>
+
+    <hr class="post-divider">
+
+    <!-- 게시글 본문 -->
+    <div class="post-detail-content">
+        {{ post.content | safe }}
+    </div>
+
+    <hr class="post-divider">
+
+    <!-- 작성자만 볼 수 있는 수정/삭제 버튼 -->
+    <div class="post-actions">
+        {% if current_user and current_user.id == post.author_id %} 
+            <a href="/web_board/{{ post.id }}/edit" class="btn btn-secondary btn-sm">수정</a>
+            <button id="delete-post-btn" class="btn btn-danger btn-sm">삭제</button>
+        {% endif %}
+        <a href="/web_board" class="btn btn-outline-primary btn-sm">목록으로</a>
+    </div>
+
+    <hr class="post-divider">
+
+    <!-- 댓글 영역 (향후 구현 예정) -->
+    <div class="comments-section">
+        <h3>댓글</h3>
+        <p>댓글 기능은 추후 추가 예정입니다.</p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    window.addEventListener('load', function () {
+        const deleteButton = document.getElementById('delete-post-btn');
+
+        if (deleteButton) {
+            deleteButton.addEventListener('click', async function () {
+                const confirmDelete = confirm('정말로 이 게시글을 삭제하시겠습니까?');
+
+                if (!confirmDelete) return;
+
+                const postId = {{ post.id }};
+                const deleteUrl = `/web_board/${postId}/delete`;
+
+                try {
+                    const response = await fetch(deleteUrl, {
+                        method: 'DELETE',
+                        credentials: 'include'
+                    });
+
+                    if (response.ok) {
+                        window.location.href = '/web_board';
+                    } else {
+                        const error = await response.json();
+                        alert('삭제 실패: ' + error.detail);
+                    }
+
+                } catch (error) {
+                    alert('네트워크 오류로 인해 삭제에 실패했습니다.');
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

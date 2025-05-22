@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테스트 페이지 제목</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <h1></h1>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const loginSuccess = urlParams.get('login_success');
+
+        if (loginSuccess === 'true') {
+            alert("로그인에 성공했습니다! 환영합니다!");
+        }
+    </script>
+
+    <!-- Header -->
+    <header class="nav-bar">
+        <a href="/" class="logo-link">
+            <div class="logo">테스트</div>
+        </a>
+        <nav class="menu">
+            <a href="mypage" class="btn">My page</a>
+            <a href="login" class="btn">login</a>
+        </nav>
+    </header>
+
+    <!-- 예제 강의 카드 목록 CSS Grid -->
+    <div class="grid-container">
+        <div class="card">
+            <h3>HTML 기초</h3>
+            <p>웹의 기본을 배워요</p>
+        </div>
+        <div class="card">
+            <h3>CSS 핵심</h3>
+            <p>예쁜 UI 만들기</p>
+        </div>
+        <div class="card">
+            <h3>JavaScript 입문</h3>
+            <p>동적인 웹 시작!</p>
+        </div>
+    </div>
+</body>
+</html>

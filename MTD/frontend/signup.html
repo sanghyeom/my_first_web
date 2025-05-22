@@ -1,0 +1,32 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  
+  <header class="simple-header"> 
+    <a href="/" class="logo-link">
+      <img src="/static/logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </header>
+
+  <div class="form-container">
+    <form class="login-form" action="/signup" method="post">
+      <h2>Sign up</h2>
+      <!-- 입력창: identification (ID) -->
+      <input type="text" name="identification" placeholder="Identification" required />
+      <!-- 입력창: password -->
+      <input type="password" name="password" placeholder="Password" required />
+      <!-- 입력창: 비밀번호 확인 (백엔드 검증 필요) -->
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Create account</button>
+      <button type="button" class="register-button" onclick="location.href='/login'">ID already exists</button>
+    </form>
+  </div>
+</body>
+</html>
