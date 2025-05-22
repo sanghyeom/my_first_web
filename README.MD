@@ -85,9 +85,8 @@
 
 <details>
 <summary> <b> 이미지 </b></summary>
+
 <br/>
-<img src="https://github.com/user-attachments/assets/92563603-f362-40bd-a03a-5b6edea600a6" alt="[출처: ERD]">
-</details>
 <img src="https://github.com/user-attachments/assets/306bf85b-6c76-47b3-be84-ff6b550475fa" alt="[1]">
 
 <img src="https://github.com/user-attachments/assets/61adb942-57e5-4a2e-935d-187aac570bed" alt="[2]">
@@ -103,4 +102,5 @@
 <img src="https://github.com/user-attachments/assets/07c75c90-1fd4-4ab9-b706-1203c422bb51" alt="[7]">
 
 <img src="https://github.com/user-attachments/assets/00bc8638-6b8d-4ab9-9893-1eb745ee3d43" alt="[8]">
+
 </details>
